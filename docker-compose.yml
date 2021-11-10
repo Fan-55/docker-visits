@@ -3,6 +3,7 @@ services:
   redis-server:
     image: 'redis'
   node-app:
+    restart: always
     build: . # look in the current directory for the dockerfile and use that to build the image for the node-app container
     ports:
         - "4001:8081" # prot on local machine : port inside the container
